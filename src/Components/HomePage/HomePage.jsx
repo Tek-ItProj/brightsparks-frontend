@@ -18,7 +18,7 @@ const HomePage = () => {
     <Navbar />
     <div className="home-page">
       {/* Hero Section */}
-      <section className="bg-black text-white text-center py-5">
+      <section className="bg-black text-white text-center" style={{ padding: "10rem 0" }}>
         <div className="container">
           <div className="row">
             <div className="col">
@@ -26,9 +26,9 @@ const HomePage = () => {
               <p className="lead">
                 Education in Jamaica shouldn’t depend on which school you attend or who your teacher is.
               </p>
-              <p>Let’s bridge the education gap together.</p>
+              <p className="lead">Let’s bridge the education gap together.</p>
               <button className="btn btn-success btn-lg mt-3">Join Bright Sparks →</button>
-              <p className="text-muted mt-2">Free for students and institutions across Jamaica.</p>
+              <p className="text-secondary mt-4">Free for students and institutions across Jamaica.</p>
             </div>
           </div>
         </div>

@@ -15,7 +15,7 @@ const Navbar = () => {
         <nav className="navbar navbar-expand-lg navbar-dark bg-black px-4">
             <a className="navbar-brand d-flex align-items-center" href="#">
             <img src={logo} alt="Bright Sparks" width="40" height="40" className="me-2"/>
-            <span>Bright Sparks</span>
+            <span className="fw-medium">Bright Sparks</span>
             </a>
             <div className="ms-auto">
             <a href="/login" className="text-white me-3 text-decoration-none">Log In</a>
