@@ -1,6 +1,9 @@
 import React from "react";
 import Navbar from "../Navbar.jsx";
-import graph from "../assets/chart-column-solid.svg";
+import graph from "../../assets/chart-column-solid.svg";
+import award from "../../assets/award-solid.svg";
+import peer from "../../assets/users-solid.svg";
+import book from "../../assets/book-open-solid.svg";
 
 import "./HomePage.css"; // Optional for extra styling
 
@@ -33,6 +36,7 @@ const HomePage = () => {
             {/* Feature Box 1 */}
             <div className="col-md-3">
               <div className="p-3 bg-dark text-white rounded">
+                <img src={graph} alt="Growth" className="mb-3" width="30" height="30" /> 
                 <h5>Track Your Academic Growth</h5>
                 <p>Includes Personalized Dashboards, AI-based recommendations, and more.</p>
               </div>
@@ -41,6 +45,7 @@ const HomePage = () => {
             {/* Feature Box 2 */}
             <div className="col-md-3">
               <div className="p-3 bg-dark text-white rounded">
+                <img src={award} alt="Growth" className="mb-3" width="60" /> 
                 <h5>Leadership Boards & Competition</h5>
                 <p>Engage in leaderboards, badges, rewards, and user ratings.</p>
               </div>
@@ -49,6 +54,7 @@ const HomePage = () => {
             {/* Feature Box 3 */}
             <div className="col-md-3">
               <div className="p-3 bg-dark text-white rounded">
+                <img src={peer} alt="Growth" className="mb-3" width="60" /> 
                 <h5>Assignment Help & Peer Reviews</h5>
                 <p>Includes AI suggestions, plagiarism detection, and discussion threads.</p>
               </div>
@@ -57,6 +63,7 @@ const HomePage = () => {
             {/* Feature Box 4 */}
             <div className="col-md-3">
               <div className="p-3 bg-dark text-white rounded">
+                <img src={book} alt="Growth" className="mb-3" width="60" /> 
                 <h5>Open Tutoring for All</h5>
                 <p>Includes tutor matching, live virtual classrooms, and one-on-one tutoring.</p>
               </div>
