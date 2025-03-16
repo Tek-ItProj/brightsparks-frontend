@@ -1,0 +1,48 @@
+/* Full-page background */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f9fa; /* Light gray background */
+    gap: 2rem; /* Adds spacing between image and form */
+  }
+  
+  /* Left Side - Image */
+  .login-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .login-image img {
+    max-width: 80%;
+    border-radius: 10px;
+  }
+  
+  /* Right Side - Form */
+  .login-form {
+    flex: 1;
+    max-width: 400px;
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  /* Form Inputs */
+  .login-form label {
+    display: block;
+    text-align: left;
+    margin-bottom: 0.3rem;
+  }
+  
+  /* Form Button */
+  .login-form .btn-success {
+    background-color: green;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
