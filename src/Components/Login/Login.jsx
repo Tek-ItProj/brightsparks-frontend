@@ -1,4 +1,6 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import "bootstrap/dist/js/bootstrap.bundle.min.js"; // Import Bootstrap JS for carousel
 // import "./Login.css"; // Custom styles
 import Navbar from "../Navbar.jsx";
@@ -9,6 +11,28 @@ import slide4 from "../../assets/slide4.jpg";
 import googlephoto from "../../assets/google.png";
 
 const Login = () => {
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      const response = await fetch(`https://24.144.65.216:8080/login?username=${email}&password=${password}`, {
+        method: "POST",
+      });
+      if (response.status === 200) {
+        navigate("/dashboard");
+      } else {
+        throw new Error("Login failed");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Login failed. Please check your credentials and try again.");
+    }
+  };
   return (
     <>
     <Navbar />
@@ -48,12 +72,14 @@ const Login = () => {
           <div className="col-md-6">
             <h3 className="fw-bold text-center">Login to Your Account</h3>
 
-            <form className="mt-3">
+            <form className="mt-3" onSubmit={handleSubmit}>
               <div className="mb-3">
                 <input
                   type="email"
                   className="form-control"
                   placeholder="Email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   required
                 />
               </div>
@@ -62,6 +88,8 @@ const Login = () => {
                   type="password"
                   className="form-control"
                   placeholder="Password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                   required
                 />
               </div>
