@@ -4,6 +4,9 @@ import graph from "../../assets/chart-column-solid.svg";
 import award from "../../assets/award-solid.svg";
 import peer from "../../assets/users-solid.svg";
 import book from "../../assets/book-open-solid.svg";
+import woman from "../../assets/woman.jpg";
+import man from "../../assets/man.webp";
+import musicMan from "../../assets/musicMan.jpg";
 
 import "./HomePage.css"; // Optional for extra styling
 
@@ -32,40 +35,56 @@ const HomePage = () => {
       {/* Features Section */}
       <section className="py-5 bg-light">
         <div className="container">
-          <div className="row text-center">
+          <div className="row">
             {/* Feature Box 1 */}
-            <div className="col-md-3">
-              <div className="p-3 bg-dark text-white rounded">
-                <img src={graph} alt="Growth" className="mb-3" width="30" height="30" /> 
-                <h5>Track Your Academic Growth</h5>
-                <p>Includes Personalized Dashboards, AI-based recommendations, and more.</p>
+            <div className="col-md-3 d-flex">
+              <div className="p-4 bg-dark text-white rounded h-100 d-flex flex-column">
+                <img src={graph} alt="Growth" className="me-3 mb-3" width="30" height="30" /> 
+                <div>
+                  <h5 className="mb-3">Track Your Academic Growth</h5>  {/* 🔹 "mb-1" reduces space below heading */}
+                  <p className="text-start">  {/* 🔹 "text-start" ensures left-aligned text */}
+                    Includes Personalized Dashboards, AI-based recommendations, and more.
+                  </p>
+                </div>
               </div>
             </div>
 
-            {/* Feature Box 2 */}
-            <div className="col-md-3">
-              <div className="p-3 bg-dark text-white rounded">
-                <img src={award} alt="Growth" className="mb-3" width="60" /> 
-                <h5>Leadership Boards & Competition</h5>
-                <p>Engage in leaderboards, badges, rewards, and user ratings.</p>
+          
+            <div className="col-md-3 d-flex">
+              <div className="p-4 bg-dark text-white rounded h-100 d-flex flex-column">
+                <img src={award} alt="Growth" className="me-3 mb-3" width="30" height="30" /> 
+                <div>
+                  <h5 className="mb-3">Leadership Boards & Competition</h5>  {/* 🔹 "mb-1" reduces space below heading */}
+                  <p className="text-start">  {/* 🔹 "text-start" ensures left-aligned text */}
+                    Engage in leaderboards, badges, rewards, and user ratings.
+                  </p>
+                </div>
               </div>
             </div>
 
             {/* Feature Box 3 */}
-            <div className="col-md-3">
-              <div className="p-3 bg-dark text-white rounded">
-                <img src={peer} alt="Growth" className="mb-3" width="60" /> 
-                <h5>Assignment Help & Peer Reviews</h5>
-                <p>Includes AI suggestions, plagiarism detection, and discussion threads.</p>
+            <div className="col-md-3 d-flex">
+              <div className="p-4 bg-dark text-white rounded h-100 d-flex flex-column">
+                <img src={peer} alt="Growth" className="me-3 mb-3" width="30" height="30" /> 
+                <div>
+                  <h5 className="mb-3">Assignment Help & Peer Reviews</h5>  {/* 🔹 "mb-1" reduces space below heading */}
+                  <p className="text-start">  {/* 🔹 "text-start" ensures left-aligned text */}
+                    Includes AI suggestions, plagiarism detection, and discussion threads.
+                  </p>
+                </div>
               </div>
             </div>
 
             {/* Feature Box 4 */}
-            <div className="col-md-3">
-              <div className="p-3 bg-dark text-white rounded">
-                <img src={book} alt="Growth" className="mb-3" width="60" /> 
-                <h5>Open Tutoring for All</h5>
-                <p>Includes tutor matching, live virtual classrooms, and one-on-one tutoring.</p>
+            <div className="col-md-3 d-flex">
+              <div className="p-4 bg-dark text-white rounded h-100 d-flex flex-column">
+                <img src={book} alt="Growth" className="me-3 mb-3" width="30" height="30" /> 
+                <div>
+                  <h5 className="mb-3">Open Tutoring for All</h5>  {/* 🔹 "mb-1" reduces space below heading */}
+                  <p className="text-start">  {/* 🔹 "text-start" ensures left-aligned text */}
+                    Includes tutor matching, live virtual classrooms, and one-on-one tutoring.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -77,35 +96,45 @@ const HomePage = () => {
         <div className="container">
           <h2 className="text-center fw-bold mb-4">EXPERT TUTORS TO SUPPORT YOUR JOURNEY</h2>
           <div className="row text-center">
-            {/* Tutor 1 */}
-            <div className="col-md-6">
-              <div className="p-3 bg-white text-dark rounded">
-                <img
-                  src="/path-to-image/ashley.jpg"
-                  alt="Ashley Rodney"
-                  className="img-fluid rounded-circle mb-3"
-                  style={{ width: "120px", height: "120px" }}
-                />
-                <h5>Ashley Rodney</h5>
-                <p><em>Secondary Level</em></p>
-                <p>Specialty: Social Studies</p>
+          {/* Tutor 1 */}
+          <div className="col-md-6 d-flex justify-content-center">
+            <div className="bg-white text-dark rounded overflow-hidden" style={{ width: "320px" }}>  
+              <img
+                src={woman} alt="Ashley Rodney" className="w-100" style={{ height: "300px", objectFit: "cover" }}/>
+              <div className="p-3 text-center" style={{ backgroundColor: "#FFD43B", borderBottomLeftRadius: "10px", borderBottomRightRadius: "10px" }}>  
+                <h4 className="fw-bold mb-1">Ashley Rodney</h4>
+                <h6 className="text-muted"><em>Secondary Level</em></h6>
+                <p className="fw-bold">Specialty: Social Studies</p>
               </div>
             </div>
+          </div>
 
-            {/* Tutor 2 */}
-            <div className="col-md-6">
-              <div className="p-3 bg-white text-dark rounded">
-                <img
-                  src="/path-to-image/malik.jpg"
-                  alt="Malik Thompson"
-                  className="img-fluid rounded-circle mb-3"
-                  style={{ width: "120px", height: "120px" }}
-                />
-                <h5>Malik Thompson</h5>
-                <p><em>Undergraduate Level</em></p>
-                <p>Specialty: Chemistry</p>
+            {/* Tutor 2 */}            
+            <div className="col-md-6 d-flex justify-content-center">
+            <div className="bg-white text-dark rounded overflow-hidden" style={{ width: "320px" }}>  
+              <img
+                src={man} alt="Malik Thompson" className="w-100" style={{ height: "300px", objectFit: "cover" }}/>
+              <div className="p-3 text-center" style={{ backgroundColor: "#FFD43B", borderBottomLeftRadius: "10px", borderBottomRightRadius: "10px" }}>  
+                <h4 className="fw-bold mb-1">Malik Thompson</h4>
+                <h6 className="text-muted"><em>Undergraduate Level</em></h6>
+                <p className="fw-bold">Specialty: Chemistry</p>
               </div>
             </div>
+          </div>
+
+          {/* Tutor 3 */}            
+          <div className="col-md-6 d-flex justify-content-center">
+            <div className="bg-white text-dark rounded overflow-hidden" style={{ width: "320px" }}>  
+              <img
+                src={musicMan} alt="Ryan Stewart" className="w-100" style={{ height: "300px", objectFit: "cover" }}/>
+              <div className="p-3 text-center" style={{ backgroundColor: "#FFD43B", borderBottomLeftRadius: "10px", borderBottomRightRadius: "10px" }}>  
+                <h4 className="fw-bold mb-1">Ryan Stewart</h4>
+                <h6 className="text-muted"><em>Primary Level</em></h6>
+                <p className="fw-bold">Specialty: Music</p>
+              </div>
+            </div>
+          </div>
+
           </div>
         </div>
       </section>
