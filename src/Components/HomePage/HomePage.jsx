@@ -1,12 +1,14 @@
 import React from "react";
 import Navbar from "../Navbar.jsx";
+import CourseSection from "../CourseSection";
+import CallToAction from "../CallToAction";
 import graph from "../../assets/chart-column-solid.svg";
 import award from "../../assets/award-solid.svg";
 import peer from "../../assets/users-solid.svg";
 import book from "../../assets/book-open-solid.svg";
 import woman from "../../assets/woman.jpg";
 import man from "../../assets/man.webp";
-import musicMan from "../../assets/musicMan.jpg";
+import musicWoman from "../../assets/musicWoman.jpg";
 
 import "./HomePage.css"; // Optional for extra styling
 
@@ -90,6 +92,7 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+      
 
       {/* Expert Tutors Section */}
       <section className="py-5 bg-black text-white">
@@ -97,10 +100,9 @@ const HomePage = () => {
           <h2 className="text-center fw-bold mb-4">EXPERT TUTORS TO SUPPORT YOUR JOURNEY</h2>
           <div className="row text-center">
           {/* Tutor 1 */}
-          <div className="col-md-6 d-flex justify-content-center">
+          <div className="col-md-4 d-flex justify-content-center">
             <div className="bg-white text-dark rounded overflow-hidden" style={{ width: "320px" }}>  
-              <img
-                src={woman} alt="Ashley Rodney" className="w-100" style={{ height: "300px", objectFit: "cover" }}/>
+              <img src={woman} alt="Ashley Rodney" className="w-100" style={{ height: "300px", objectFit: "cover" }}/>
               <div className="p-3 text-center" style={{ backgroundColor: "#FFD43B", borderBottomLeftRadius: "10px", borderBottomRightRadius: "10px" }}>  
                 <h4 className="fw-bold mb-1">Ashley Rodney</h4>
                 <h6 className="text-muted"><em>Secondary Level</em></h6>
@@ -110,10 +112,9 @@ const HomePage = () => {
           </div>
 
             {/* Tutor 2 */}            
-            <div className="col-md-6 d-flex justify-content-center">
+            <div className="col-md-4 d-flex justify-content-center">
             <div className="bg-white text-dark rounded overflow-hidden" style={{ width: "320px" }}>  
-              <img
-                src={man} alt="Malik Thompson" className="w-100" style={{ height: "300px", objectFit: "cover" }}/>
+              <img src={man} alt="Malik Thompson" className="w-100" style={{ height: "300px", objectFit: "cover" }}/>
               <div className="p-3 text-center" style={{ backgroundColor: "#FFD43B", borderBottomLeftRadius: "10px", borderBottomRightRadius: "10px" }}>  
                 <h4 className="fw-bold mb-1">Malik Thompson</h4>
                 <h6 className="text-muted"><em>Undergraduate Level</em></h6>
@@ -123,12 +124,12 @@ const HomePage = () => {
           </div>
 
           {/* Tutor 3 */}            
-          <div className="col-md-6 d-flex justify-content-center">
+          <div className="col-md-4 d-flex justify-content-center">
             <div className="bg-white text-dark rounded overflow-hidden" style={{ width: "320px" }}>  
               <img
-                src={musicMan} alt="Ryan Stewart" className="w-100" style={{ height: "300px", objectFit: "cover" }}/>
+                src={musicWoman} alt="Rose Stewart" className="w-100" style={{ height: "300px", objectFit: "cover" }}/>
               <div className="p-3 text-center" style={{ backgroundColor: "#FFD43B", borderBottomLeftRadius: "10px", borderBottomRightRadius: "10px" }}>  
-                <h4 className="fw-bold mb-1">Ryan Stewart</h4>
+                <h4 className="fw-bold mb-1">Rose Stewart</h4>
                 <h6 className="text-muted"><em>Primary Level</em></h6>
                 <p className="fw-bold">Specialty: Music</p>
               </div>
@@ -138,6 +139,9 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+      <CourseSection />
+
+      <CallToAction />
     </div>
     </>
   );
