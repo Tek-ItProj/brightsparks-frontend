@@ -20,7 +20,7 @@ const Login = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await fetch(`https://24.144.65.216:8080/login?username=${email}&password=${password}`, {
+      const response = await fetch(`http://24.144.65.216:8080/login?username=${email}&password=${password}`, {
         method: "POST",
       });
       if (response.status === 200) {
