@@ -37,6 +37,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./Components/Login/Login";
+import Signup from "./Components/Signup";
 import HomePage from "./Components/HomePage/HomePage";
 import Footer from "./Components/Footer";
 
@@ -51,6 +52,8 @@ function App() {
                 
                 {/* Login page at "/login" */}
                 <Route path="/login" element={<Login />} />
+
+                <Route path="/signup" element={<Signup />} />
 
             </Routes>
             </div>
