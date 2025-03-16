@@ -3,7 +3,7 @@ import logo from "../assets/logo-bs.svg";
 import emailIcon from "../assets/envelope-solid.svg";
 import phoneIcon from "../assets/phone-solid.svg";
 import openingIcon from "../assets/clock-solid.svg";
-import googleApple from "../assets/google-apple.png";
+import googleApple from "../assets/google-apple-remove.png";
 
 const Footer = () => {
   return (
@@ -53,15 +53,15 @@ const Footer = () => {
 
           {/* Social Media & App Download */}
           <div className="col-md-3">
-            <h5 className="fw-bold">Follow Us</h5>
+            <h5 className="fw-bold">Download Now</h5>
             <div className="d-flex gap-3">
               <a href="#"><i className="fab fa-facebook fa-lg text-white"></i></a>
               <a href="#"><i className="fab fa-instagram fa-lg text-white"></i></a>
               <a href="#"><i className="fab fa-x-twitter fa-lg text-white"></i></a>
               <a href="#"><i className="fab fa-linkedin fa-lg text-white"></i></a>
             </div>
-            <h5 className="fw-bold mt-4">Download Now</h5>
-            <a href="#"><img src={googleApple} alt="Google Play & App Store" className="img-fluid mt-2" style={{ width: "120px" }} /></a>
+            {/* <h5 className="fw-bold mt-4">Follow Us</h5> */}
+            <a href="#"><img src={googleApple} alt="Google Play & App Store" className="img-fluid mt-1" style={{ width: "120px" }} /></a>
         
           </div>
 

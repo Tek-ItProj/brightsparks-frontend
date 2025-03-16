@@ -9,7 +9,7 @@ import book from "../../assets/book-open-solid.svg";
 import woman from "../../assets/woman.jpg";
 import man from "../../assets/man.webp";
 import musicWoman from "../../assets/musicWoman.jpg";
-
+import { Link } from "react-router-dom";
 import "./HomePage.css"; // Optional for extra styling
 
 const HomePage = () => {
@@ -27,7 +27,7 @@ const HomePage = () => {
                 Education in Jamaica shouldn’t depend on which school you attend or who your teacher is.
               </p>
               <p className="lead">Let’s bridge the education gap together.</p>
-              <button className="btn btn-success btn-lg mt-3">Join Bright Sparks →</button>
+              <Link to="/signup" className="btn btn-success btn-lg mt-3"> Join Bright Sparks →</Link>
               <p className="text-secondary mt-4">Free for students and institutions across Jamaica.</p>
             </div>
           </div>
