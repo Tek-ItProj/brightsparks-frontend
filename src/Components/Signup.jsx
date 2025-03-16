@@ -6,6 +6,7 @@ import slide1 from "../assets/slide1.avif";
 import slide2 from "../assets/slide2.jpg";
 import slide3 from "../assets/slide3.jpg";
 import slide4 from "../assets/slide4.jpg";
+import googlephoto from "../assets/google.png";
 
 const Signup = () => {
   return (
@@ -94,13 +95,7 @@ const Signup = () => {
   
                 {/* Google Sign Up Button */}
                 <button className="btn btn-outline-dark w-100 d-flex align-items-center justify-content-center">
-                  <img
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png"
-                    alt="Google"
-                    className="me-2"
-                    style={{ width: "20px" }}
-                  />
-                  Sign up with Google
+                  <img src= {googlephoto} alt="Google" className="me-2" style={{ width: "20px" }}/> Sign up with Google
                 </button>
   
                 {/* Login Link */}

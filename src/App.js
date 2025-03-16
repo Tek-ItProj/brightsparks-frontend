@@ -36,16 +36,24 @@
 
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import { Container, Row, Col } from "react-bootstrap";
 import Login from "./Components/Login/Login";
 import Signup from "./Components/Signup";
 import HomePage from "./Components/HomePage/HomePage";
 import Footer from "./Components/Footer";
+import Dashboard from "./Components/Dashboard/Dashboard";
+import { useLocation } from "react-router-dom";
+// import DashboardLeft from "./Components/Dashboard-Left";
+// import DashboardRight from "./Components/Dashboard-Right";
+// import DashboardMain from "./Components/Dashboard-Main";
 
-function App() {
+function App() {  
   return (
     <Router>
+      
       <div className="d-flex flex-column min-vh-100">
           <div className="flex-grow-1">
+            
             <Routes>
                 {/* Home page at "/" */}
                 <Route path="/" element={<HomePage />} />
@@ -54,6 +62,8 @@ function App() {
                 <Route path="/login" element={<Login />} />
 
                 <Route path="/signup" element={<Signup />} />
+                
+                <Route path="/dashboard" element={<Dashboard />} />
 
             </Routes>
             </div>
